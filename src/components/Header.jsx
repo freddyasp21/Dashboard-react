@@ -8,7 +8,7 @@ import {
   RiWalletLine,
   RiLoginCircleLine,
   RiHeart3Fill,
-  RiThumbUpLine,
+  RiThumbUpFill
 } from "react-icons/ri";
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
@@ -32,10 +32,11 @@ function Header() {
           menuClassName="bg-secondary-100 text-white p-4"
           arrow={true}
           arrowClassName="bg-secondary-100"
+          align="end"
           className="relative hover:bg-secondary-100 p-2 rounded-lg transition-colors"
         >
           <h2 className=" px-4 py-2 text-lg text-primary text-center font-bold mb-4">
-            Notificaciones
+            Notificaciones (3)
           </h2>
           <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 mb-2">
             <Link to="/" className="flex items-center gap-4 px-2 py-2 text-sm">
@@ -67,7 +68,7 @@ function Header() {
           </MenuItem>
           <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 mb-2">
             <Link to="/" className="flex items-center gap-4 px-2 py-2 text-sm">
-              <RiThumbUpLine className="text-[#3b5998] text-3xl" />
+              <RiThumbUpFill className="text-[#3b5998] text-3xl" />
               <div className="flex flex-col">
                 <div className="flex items-center justify-between">
                   <span className="text-primary text-sm">Paul Phoenix</span>{" "}
@@ -76,6 +77,9 @@ function Header() {
                 <p className="text-gray-500">Lorem ipsum dolor sit...</p>
               </div>
             </Link>
+          </MenuItem>
+          <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 mb-2">
+            <Link to="/" className="flex items-center justify-center w-full text-primary hover:text-primary/70 transition-colors">Ver todas las notificaciones</Link>
           </MenuItem>
         </Menu>
         <Menu
@@ -94,6 +98,7 @@ function Header() {
           transition
           arrow={true}
           arrowClassName="bg-secondary-100"
+          align="end"
           menuClassName="bg-secondary-100 text-white p-4"
         >
           {" "}
@@ -117,28 +122,28 @@ function Header() {
           <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 my-2">
             <Link
               to="/configuracion"
-              className="flex items-center gap-2 px-4 py-2"
+              className="flex items-center gap-4 px-4 py-2"
             >
               <RiSettings3Line className="text-primary" /> Configuración
             </Link>
           </MenuItem>
           <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 my-2">
-            <Link to="/mensajes" className="flex items-center gap-2 px-4 py-2">
+            <Link to="/mensajes" className="flex items-center gap-4 px-4 py-2">
               <RiMessage3Line className="text-primary" /> Mensajes
             </Link>
           </MenuItem>
           <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 my-2">
-            <Link to="/ganancias" className="flex items-center gap-2 px-4 py-2">
+            <Link to="/ganancias" className="flex items-center gap-4 px-4 py-2">
               <RiMoneyDollarCircleLine className="text-primary" /> Ganancias
             </Link>
           </MenuItem>
           <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 my-2">
-            <Link to="/wallet" className="flex items-center gap-2 px-4 py-2">
+            <Link to="/wallet" className="flex items-center gap-4 px-4 py-2">
               <RiWalletLine className="text-primary" /> Wallet
             </Link>
           </MenuItem>
           <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 my-2">
-            <Link to="/logout" className="flex items-center gap-2 px-4 py-2">
+            <Link to="/logout" className="flex items-center gap-4 px-4 py-2">
               <RiLoginCircleLine className="text-primary" /> Cerrar sesión
             </Link>
           </MenuItem>
