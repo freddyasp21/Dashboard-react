@@ -1,10 +1,10 @@
 import React from "react";
-import { RiEdit2Line } from "react-icons/ri";
+import { RiEdit2Line, RiShieldCheckLine, RiLinksLine } from "react-icons/ri";
 
 function Profile() {
   return (
     <>
-    {/* Profile */}
+      {/* Profile */}
       <div className="bg-secondary-100 p-8 rounded-xl mb-8">
         <h1 className="text-2xl text-gray-100">Profile</h1>
         <hr className="my-8 border-gray-500/30" />
@@ -179,39 +179,137 @@ function Profile() {
       <div className="bg-secondary-100 p-8 rounded-xl mb-8">
         <h1 className="text-2xl text-gray-100">Correo y Contraseña</h1>
         <hr className="my-8 border-gray-500/30" />
-        
-        <form action="" className="">
-            <div className="flex items-center justify-between mb-8">
-                <div className="">
-                    <h5 className="text-gray-100 text-xl">Correo eléctronico</h5>
-                    <p className="text-gray-500 text-sm">yvonneMuller@gmail.com</p>
-                </div>
-                <div className="">
-                    <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">Cambiar Email</button>
-                </div>
-            </div>
 
-            <div className="flex items-center justify-between">
-                <div className="">
-                    <h5 className="text-gray-100 text-xl">Contraseña</h5>
-                    <p className="text-gray-500 text-sm">************</p>
-                </div>
-                <div className="">
-                    <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">Resetar contraseña</button>
-                </div>
+        <form action="" className="">
+          <div className="flex items-center justify-between mb-8">
+            <div className="">
+              <h5 className="text-gray-100 text-xl">Correo eléctronico</h5>
+              <p className="text-gray-500 text-sm">yvonneMuller@gmail.com</p>
             </div>
+            <div className="">
+              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
+                Cambiar Email
+              </button>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mb-8">
+            <div className="">
+              <h5 className="text-gray-100 text-xl">Contraseña</h5>
+              <p className="text-gray-500 text-sm">************</p>
+            </div>
+            <div className="">
+              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
+                Resetar contraseña
+              </button>
+            </div>
+          </div>
         </form>
-        
-        <hr className="my-8 border-gray-500/30" />
-        <div className="flex justify-end">
-          <button className="bg-primary text-black py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">
-            Guardar
-          </button>
+
+        <div className="flex items-center justify-between bg-blue-500/20 p-4 rounded-lg border border-dashed border-blue-500 mb-8">
+          <div className="flex items-center gap-2">
+            <RiShieldCheckLine className="text-4xl text-blue-500" />
+            <div className="">
+              <h5 className="text-blue-500 text-xl">Asegure su Cuenta</h5>
+              <p className="text-blue-500 text-sm">
+                Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus
+                lau
+              </p>
+            </div>
+          </div>
+          <div className="">
+            <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
+              Resetar contraseña
+            </button>
+          </div>
         </div>
       </div>
-        
 
+      {/* Conected */}
 
+      <div className="bg-secondary-100 p-8 rounded-xl mb-8">
+        <h1 className="text-2xl text-gray-100">Cuentas Conectadas</h1>
+        <hr className="my-8 border-gray-500/30" />
+
+        <div className="flex items-center justify-between bg-blue-500/20 p-4 rounded-lg border border-dashed border-blue-500 mb-8">
+          <div className="flex items-center gap-2">
+            <RiLinksLine className="text-4xl text-blue-500" />
+            <div className="">
+              <p className="text-white text-sm">
+                Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus lau. <span className="text-blue-500 hover:underline hover:cursor-pointer">Learn More</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form action="" className="">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-2">
+              <img
+                src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png"
+                alt=""
+                className="w-10 h-10 object-cover"
+              />
+              <div className="">
+                <h5 className="text-gray-100 hover:text-blue-500 text-xl">Google</h5>
+                <p className="text-blue-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
+                Resetar contraseña
+              </button>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-2">
+              <img
+                src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"
+                alt=""
+                className="w-10 h-10 object-cover"
+              />
+              <div className="">
+                <h5 className="text-gray-100 hover:text-blue-500 text-xl">Asegure su Cuenta</h5>
+                <p className="text-blue-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
+                Resetar contraseña
+              </button>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-2">
+              <img
+                src="https://pbs.twimg.com/tweet_video_thumb/DxIDCKUXQAAtE2-.jpg"
+                alt=""
+                className="w-10 h-10 object-cover"
+              />
+              <div className="">
+                <h5 className="text-gray-100 hover:text-blue-500 text-xl">Asegure su Cuenta</h5>
+                <p className="text-blue-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
+                Resetar contraseña
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </>
   );
 }
