@@ -86,12 +86,12 @@ function Header() {
           menuButton={
             <MenuButton className="flex items-center gap-x-2 relative hover:bg-secondary-100 py-2 px-4 rounded-lg transition-colors">
               <img
-                src="https://img.freepik.com/foto-gratis/concepto-emociones-personas-foto-cabeza-hombre-guapo-aspecto-serio-barba-confiado-decidido_1258-26730.jpg"
+                src="https://img.freepik.com/foto-gratis/retrato-hermosa-mujer-morena-rostro-sonriente_53876-137688.jpg"
                 alt=""
                 className="w-6 h-6 object-cover rounded-full"
               />
               <span className="flex items-center gap-2">
-                Jorge Luis Trejo <RiArrowDownSLine className="text-primary" />
+                Yvonne Müller <RiArrowDownSLine className="text-primary" />
               </span>
             </MenuButton>
           }
@@ -105,16 +105,16 @@ function Header() {
           <MenuItem className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 mb-4">
             <Link to="/perfil" className="flex items-center gap-x-4">
               <img
-                src="https://img.freepik.com/foto-gratis/concepto-emociones-personas-foto-cabeza-hombre-guapo-aspecto-serio-barba-confiado-decidido_1258-26730.jpg"
+                src="https://img.freepik.com/foto-gratis/retrato-hermosa-mujer-morena-rostro-sonriente_53876-137688.jpg"
                 alt=""
                 className="w-8 h-8 object-cover rounded-full"
               />
               <div className="flex flex-col text-sm">
                 <span className="flex items-center gap-2 text-sm">
-                  Jorge Luis Trejo
+                Yvonne Müller
                 </span>
                 <span className="flex items-center gap-2 text-xs text-gray-500">
-                  jorge@gmail.com
+                  yvonneMuller@gmail.com
                 </span>
               </div>
             </Link>

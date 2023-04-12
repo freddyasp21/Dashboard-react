@@ -8,7 +8,8 @@ function ForgetPassword() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="bg-secondary-100 p-8 rounded-xl shadow-xl lg:w-[450px] w-auto">
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="bg-secondary-100 p-8 rounded-xl shadow-xl lg:w-[450px] w-auto">
       <h1 className="text-3xl font-bold tracking-[5px] text-white mb-8 text-center uppercase">
         Recuperar <span className="text-primary">Contraseña</span>
       </h1>
@@ -35,7 +36,7 @@ function ForgetPassword() {
         <span className="flex items-center gap-2">
           ¿Ya tienes cuenta?{""}
           <Link
-            to="/auth"
+            to="/login"
             className="text-primary hover:text-gray-100 transition-colors"
           >
             Ingresar
@@ -43,12 +44,14 @@ function ForgetPassword() {
         </span>
         <span className="flex items-center gap-2">
         ¿No tienes cuenta?{""} 
-        <Link to="/auth/registro" className="text-primary hover:text-gray-100 transition-colors">
+        <Link to="/registro" className="text-primary hover:text-gray-100 transition-colors">
             Registrate
             </Link>
         </span>
       </div>
     </div>
+    </div>
+    
   );
 }
 
