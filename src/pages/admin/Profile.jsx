@@ -4,8 +4,8 @@ import { Switch } from "@headlessui/react";
 
 function Profile() {
   const [enabled, setEnabled] = useState(false);
-  const [enabledGit, setEnabledGit] = useState(false)
-  const [enabledSlack, setenabledSlack] = useState(false)
+  const [enabledGit, setEnabledGit] = useState(false);
+  const [enabledSlack, setenabledSlack] = useState(false);
   return (
     <>
       {/* Profile */}
@@ -223,7 +223,7 @@ function Profile() {
           </div>
           <div className="">
             <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
-              Resetar contraseña
+              Activar
             </button>
           </div>
         </div>
@@ -347,12 +347,116 @@ function Profile() {
                 <span className="sr-only">Use setting</span>
                 <span
                   aria-hidden="true"
-                  className={`${enabledSlack ? "translate-x-9" : "translate-x-0"}
+                  className={`${
+                    enabledSlack ? "translate-x-9" : "translate-x-0"
+                  }
             pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
                 />
               </Switch>
             </div>
           </div>
+        </form>
+      </div>
+
+      {/* Email preferences */}
+
+      <div className="bg-secondary-100 p-8 rounded-xl mb-8">
+        <h1 className="text-2xl text-gray-100">
+          Notificaciones de Correo Eléctronico
+        </h1>
+        <hr className="my-8 border-gray-500/30" />
+
+        <form action="" className="">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-4">
+             <input type="checkbox" className="accent-primary" />
+              <div className="">
+                <h5 className="text-gray-300">
+                  Successfull Payments
+                </h5>
+                <p className="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-4">
+             <input type="checkbox" className="accent-primary" />
+              <div className="">
+                <h5 className="text-gray-300">
+                  Successfull Payments
+                </h5>
+                <p className="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-4">
+             <input type="checkbox" className="accent-primary" />
+              <div className="">
+                <h5 className="text-gray-300">
+                  Successfull Payments
+                </h5>
+                <p className="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-4">
+             <input type="checkbox" className="accent-primary" />
+              <div className="">
+                <h5 className="text-gray-300">
+                  Successfull Payments
+                </h5>
+                <p className="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-4">
+             <input type="checkbox" className="accent-primary" />
+              <div className="">
+                <h5 className="text-gray-300">
+                  Successfull Payments
+                </h5>
+                <p className="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-4">
+             <input type="checkbox" className="accent-primary" />
+              <div className="">
+                <h5 className="text-gray-300">
+                  Successfull Payments
+                </h5>
+                <p className="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
+                  ducimus lau
+                </p>
+              </div>
+            </div>
+          </div>
+
         </form>
       </div>
     </>
