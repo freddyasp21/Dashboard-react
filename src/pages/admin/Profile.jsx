@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiEdit2Line, RiShieldCheckLine, RiLinksLine } from "react-icons/ri";
+import { Switch } from "@headlessui/react";
 
 function Profile() {
+  const [enabled, setEnabled] = useState(false);
+  const [enabledGit, setEnabledGit] = useState(false)
+  const [enabledSlack, setenabledSlack] = useState(false)
   return (
     <>
       {/* Profile */}
@@ -236,7 +240,12 @@ function Profile() {
             <RiLinksLine className="text-4xl text-blue-500" />
             <div className="">
               <p className="text-white text-sm">
-                Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus lau. <span className="text-blue-500 hover:underline hover:cursor-pointer">Learn More</span>
+                Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus
+                Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus
+                lau.{" "}
+                <span className="text-blue-500 hover:underline hover:cursor-pointer">
+                  Learn More
+                </span>
               </p>
             </div>
           </div>
@@ -244,14 +253,16 @@ function Profile() {
 
         <form action="" className="">
           <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <img
                 src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png"
                 alt=""
                 className="w-10 h-10 object-cover"
               />
               <div className="">
-                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">Google</h5>
+                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">
+                  Google
+                </h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -259,21 +270,33 @@ function Profile() {
               </div>
             </div>
             <div className="">
-              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
-                Resetar contraseña
-              </button>
+              <Switch
+                checked={enabled}
+                onChange={setEnabled}
+                className={`${enabled ? "bg-primary" : "bg-secondary-900"}
+          relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+              >
+                <span className="sr-only">Use setting</span>
+                <span
+                  aria-hidden="true"
+                  className={`${enabled ? "translate-x-9" : "translate-x-0"}
+            pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+                />
+              </Switch>
             </div>
           </div>
 
           <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <img
                 src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"
                 alt=""
                 className="w-10 h-10 object-cover"
               />
               <div className="">
-                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">Github</h5>
+                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">
+                  Github
+                </h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -281,21 +304,33 @@ function Profile() {
               </div>
             </div>
             <div className="">
-              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
-                Resetar contraseña
-              </button>
+              <Switch
+                checked={enabledGit}
+                onChange={setEnabledGit}
+                className={`${enabledGit ? "bg-primary" : "bg-secondary-900"}
+          relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+              >
+                <span className="sr-only">Use setting</span>
+                <span
+                  aria-hidden="true"
+                  className={`${enabledGit ? "translate-x-9" : "translate-x-0"}
+            pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+                />
+              </Switch>
             </div>
           </div>
 
           <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <img
                 src="https://pbs.twimg.com/tweet_video_thumb/DxIDCKUXQAAtE2-.jpg"
                 alt=""
                 className="w-10 h-10 object-cover"
               />
               <div className="">
-                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">Slack</h5>
+                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">
+                  Slack
+                </h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -303,95 +338,19 @@ function Profile() {
               </div>
             </div>
             <div className="">
-              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
-                Resetar contraseña
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-
-       {/* Conected */}
-
-       <div className="bg-secondary-100 p-8 rounded-xl mb-8">
-        <h1 className="text-2xl text-gray-100">Cuentas Conectadas</h1>
-        <hr className="my-8 border-gray-500/30" />
-
-        <div className="flex items-center justify-between bg-blue-500/20 p-4 rounded-lg border border-dashed border-blue-500 mb-8">
-          <div className="flex items-center gap-2">
-            <RiLinksLine className="text-4xl text-blue-500" />
-            <div className="">
-              <p className="text-white text-sm">
-                Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus lau. <span className="text-blue-500 hover:underline hover:cursor-pointer">Learn More</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <form action="" className="">
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-2">
-              <img
-                src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png"
-                alt=""
-                className="w-10 h-10 object-cover"
-              />
-              <div className="">
-                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">Google</h5>
-                <p className="text-gray-500 text-sm">
-                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
-                  ducimus lau
-                </p>
-              </div>
-            </div>
-            <div className="">
-              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
-                Resetar contraseña
-              </button>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-2">
-              <img
-                src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"
-                alt=""
-                className="w-10 h-10 object-cover"
-              />
-              <div className="">
-                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">Github</h5>
-                <p className="text-gray-500 text-sm">
-                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
-                  ducimus lau
-                </p>
-              </div>
-            </div>
-            <div className="">
-              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
-                Resetar contraseña
-              </button>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-2">
-              <img
-                src="https://pbs.twimg.com/tweet_video_thumb/DxIDCKUXQAAtE2-.jpg"
-                alt=""
-                className="w-10 h-10 object-cover"
-              />
-              <div className="">
-                <h5 className="text-gray-100 hover:text-blue-500 text-xl transition-colors hover:cursor-pointer font-medium">Slack</h5>
-                <p className="text-gray-500 text-sm">
-                  Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
-                  ducimus lau
-                </p>
-              </div>
-            </div>
-            <div className="">
-              <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
-                Resetar contraseña
-              </button>
+              <Switch
+                checked={enabledSlack}
+                onChange={setenabledSlack}
+                className={`${enabledSlack ? "bg-primary" : "bg-secondary-900"}
+          relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+              >
+                <span className="sr-only">Use setting</span>
+                <span
+                  aria-hidden="true"
+                  className={`${enabledSlack ? "translate-x-9" : "translate-x-0"}
+            pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+                />
+              </Switch>
             </div>
           </div>
         </form>
