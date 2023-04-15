@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { RiEdit2Line, RiShieldCheckLine, RiLinksLine } from "react-icons/ri";
+import {
+  RiEdit2Line,
+  RiShieldCheckLine,
+  RiLinksLine,
+  RiErrorWarningLine,
+} from "react-icons/ri";
 import { Switch } from "@headlessui/react";
 
 function Profile() {
@@ -41,8 +46,8 @@ function Profile() {
 
           {/* name */}
 
-          <div className="flex items-center mb-8">
-            <div className="w-1/4">
+          <div className="flex flex-col md:flex-row items-center mb-8">
+            <div className="w-full md:w-1/4 mb-2 md:mb-0">
               <p className="">
                 Nombre Completo <span className="text-red-500">*</span>
               </p>
@@ -67,13 +72,13 @@ function Profile() {
 
           {/* Company */}
 
-          <div className="flex items-center mb-8">
-            <div className="w-1/4">
+          <div className="flex flex-col md:flex-row items-center mb-8">
+            <div className="md:w-1/4 w-full mb-2 md:mb-0">
               <p className="">
                 Empresa <span className="text-red-500">*</span>
               </p>
             </div>
-            <div className="flex-1">
+            <div className="md:flex-1 w-full">
               <input
                 type="text"
                 className="w-full py-2 px-4 outline-none rounded-lg bg-secondary-900"
@@ -84,13 +89,13 @@ function Profile() {
 
           {/* Phone */}
 
-          <div className="flex items-center mb-8">
-            <div className="w-1/4">
+          <div className="flex flex-col md:flex-row items-center mb-8">
+            <div className="md:w-1/4 w-full mb-2 md:mb-0">
               <p className="">
                 Número de contacto <span className="text-red-500">*</span>
               </p>
             </div>
-            <div className="flex-1">
+            <div className="md:flex-1 w-full">
               <input
                 type="tel"
                 className="w-full py-2 px-4 outline-none rounded-lg bg-secondary-900"
@@ -101,13 +106,13 @@ function Profile() {
 
           {/* Pagina web */}
 
-          <div className="flex items-center mb-8">
-            <div className="w-1/4">
+          <div className="flex flex-col md:flex-row items-center mb-8">
+            <div className="md:w-1/4 w-full mb-2 md:mb-0">
               <p className="">
                 Página web <span className="text-red-500">*</span>
               </p>
             </div>
-            <div className="flex-1">
+            <div className="md:flex-1 w-full">
               <input
                 type="tel"
                 className="w-full py-2 px-4 outline-none rounded-lg bg-secondary-900"
@@ -118,13 +123,13 @@ function Profile() {
 
           {/* País */}
 
-          <div className="flex items-center mb-8">
-            <div className="w-1/4">
+          <div className="flex flex-col md:flex-row items-center mb-8">
+            <div className="md:w-1/4 w-full mb-2 md:mb-0">
               <p className="">
                 País <span className="text-red-500">*</span>
               </p>
             </div>
-            <div className="flex-1">
+            <div className="md:flex-1 w-full">
               <select
                 name=""
                 id=""
@@ -145,13 +150,13 @@ function Profile() {
 
           {/* Ciudad */}
 
-          <div className="flex items-center mb-8">
-            <div className="w-1/4">
+          <div className="flex flex-col md:flex-row items-center mb-8">
+            <div className="md:w-1/4 w-full mb-2 md:mb-0">
               <p className="">
                 Ciudad <span className="text-red-500">*</span>
               </p>
             </div>
-            <div className="flex-1">
+            <div className="md:flex-1 w-full">
               <select
                 name=""
                 id=""
@@ -185,47 +190,46 @@ function Profile() {
         <hr className="my-8 border-gray-500/30" />
 
         <form action="" className="">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-8">
             <div className="">
               <h5 className="text-gray-100 text-xl">Correo eléctronico</h5>
               <p className="text-gray-500 text-sm">yvonneMuller@gmail.com</p>
             </div>
-            <div className="">
-              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
+            <div className="w-full md:w-auto mt-4 md:mt-0">
+              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors w-full md:w-auto">
                 Cambiar Email
               </button>
             </div>
           </div>
 
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-8">
             <div className="">
               <h5 className="text-gray-100 text-xl">Contraseña</h5>
-              <p className="text-gray-500 text-sm">************</p>
+              <p className="text-gray-500 text-sm">*****************</p>
             </div>
-            <div className="">
-              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
-                Resetar contraseña
+            <div className="w-full md:w-auto mt-4 md:mt-0">
+              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors w-full md:w-auto">
+                Cambiar Contraseña
               </button>
             </div>
           </div>
         </form>
 
-        <div className="flex items-center justify-between bg-blue-500/20 p-4 rounded-lg border border-dashed border-blue-500 mb-8">
-          <div className="flex items-center gap-2">
-            <RiShieldCheckLine className="text-4xl text-blue-500" />
+        <div className="flex flex-col md:flex-row gap-y-4 md:gap-y-0 items-center justify-between bg-blue-500/20 p-4 rounded-lg border border-dashed border-blue-500 mb-8">
+          <div className="flex flex-col md:flex-row gap-y-4 md:gap-y-0 items-center gap-2">
+            <RiShieldCheckLine className="text-8xl md:text-4xl text-blue-500" />
             <div className="">
-              <h5 className="text-blue-500 text-xl">Asegure su Cuenta</h5>
-              <p className="text-blue-500 text-sm">
+              <h5 className="text-blue-500 text-xl text-center md:text-start mb-2 md:mb-0">Asegure su Cuenta</h5>
+              <p className="text-blue-500 text-sm text-justify md:text-rigth">
                 Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus
                 lau
               </p>
             </div>
           </div>
-          <div className="">
-            <button className="bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
-              Activar
-            </button>
-          </div>
+
+          <button className="w-full md:w-auto bg-blue-500/40 py-3 px-4 rounded-lg hover:bg-blue-500/30 hover:text-gray-100 transition-colors">
+            Activar
+          </button>
         </div>
       </div>
 
@@ -236,10 +240,10 @@ function Profile() {
         <hr className="my-8 border-gray-500/30" />
 
         <div className="flex items-center justify-between bg-blue-500/20 p-4 rounded-lg border border-dashed border-blue-500 mb-8">
-          <div className="flex items-center gap-2">
-            <RiLinksLine className="text-4xl text-blue-500" />
+        <div className="flex flex-col md:flex-row gap-y-4 md:gap-y-0 items-center gap-2">
+            <RiLinksLine className="text-8xl md:text-4xl text-blue-500" />
             <div className="">
-              <p className="text-white text-sm">
+            <p className="text-white text-sm">
                 Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus
                 Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus
                 lau.{" "}
@@ -369,11 +373,9 @@ function Profile() {
         <form action="" className="">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
-             <input type="checkbox" className="accent-primary" />
+              <input type="checkbox" className="accent-primary" />
               <div className="">
-                <h5 className="text-gray-300">
-                  Successfull Payments
-                </h5>
+                <h5 className="text-gray-300">Successfull Payments</h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -384,11 +386,9 @@ function Profile() {
 
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
-             <input type="checkbox" className="accent-primary" />
+              <input type="checkbox" className="accent-primary" />
               <div className="">
-                <h5 className="text-gray-300">
-                  Payouts
-                </h5>
+                <h5 className="text-gray-300">Payouts</h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -399,11 +399,9 @@ function Profile() {
 
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
-             <input type="checkbox" className="accent-primary" />
+              <input type="checkbox" className="accent-primary" />
               <div className="">
-                <h5 className="text-gray-300">
-                  Successfull Payments
-                </h5>
+                <h5 className="text-gray-300">Successfull Payments</h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -414,11 +412,9 @@ function Profile() {
 
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
-             <input type="checkbox" className="accent-primary" />
+              <input type="checkbox" className="accent-primary" />
               <div className="">
-                <h5 className="text-gray-300">
-                  Customer Payments Dispute
-                </h5>
+                <h5 className="text-gray-300">Customer Payments Dispute</h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -429,11 +425,9 @@ function Profile() {
 
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
-             <input type="checkbox" className="accent-primary" />
+              <input type="checkbox" className="accent-primary" />
               <div className="">
-                <h5 className="text-gray-300">
-                  Refund Alert
-                </h5>
+                <h5 className="text-gray-300">Refund Alert</h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -444,11 +438,9 @@ function Profile() {
 
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
-             <input type="checkbox" className="accent-primary" />
+              <input type="checkbox" className="accent-primary" />
               <div className="">
-                <h5 className="text-gray-300">
-                  Invoice Payments
-                </h5>
+                <h5 className="text-gray-300">Invoice Payments</h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
                   ducimus lau
@@ -456,8 +448,45 @@ function Profile() {
               </div>
             </div>
           </div>
-
         </form>
+      </div>
+
+      {/* Eliminar cuenta */}
+
+      <div className="bg-secondary-100 p-8 rounded-xl mb-8">
+        <h1 className="text-2xl text-gray-100">Desactivar Cuenta</h1>
+        <hr className="my-8 border-gray-500/30" />
+
+        <div className="flex items-center justify-between bg-yellow-600/10 p-4 rounded-lg border border-dashed border-yellow-600 mb-8">
+          <div className="flex items-center gap-2">
+            <RiErrorWarningLine className="text-4xl text-yellow-600" />
+            <div className="">
+              <h5 className="text-white text-xl">
+                You Are Desactivating Your Account
+              </h5>
+              <p className="text-yellow-600 text-sm">
+                Lorem ipsum dolor sit amet consectetur, elit. Reiciendis ducimus
+                Lorem ipsum doamet consectetur, elit. Reiciendis ducimus lau{" "}
+                <span className="text-yellow-400 hover:underline hover:cursor-pointer">
+                  Learn More
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form action="" className="">
+          <input type="checkbox" className="accent-primary" id="idnactive" />
+          <label htmlFor="idInactive" className="pl-4 text-gray-500">
+            I confirm my account desactivation
+          </label>
+        </form>
+
+        <div className="flex justify-end">
+          <button className="bg-red-500/60 text-gray-100 py-3 px-4 rounded-lg hover:bg-red-500/40 hover:text-gray-100 transition-colors">
+            Desactivar cuenta
+          </button>
+        </div>
       </div>
     </>
   );
