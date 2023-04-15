@@ -387,7 +387,7 @@ function Profile() {
              <input type="checkbox" className="accent-primary" />
               <div className="">
                 <h5 className="text-gray-300">
-                  Successfull Payments
+                  Payouts
                 </h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
@@ -417,7 +417,7 @@ function Profile() {
              <input type="checkbox" className="accent-primary" />
               <div className="">
                 <h5 className="text-gray-300">
-                  Successfull Payments
+                  Customer Payments Dispute
                 </h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
@@ -432,7 +432,7 @@ function Profile() {
              <input type="checkbox" className="accent-primary" />
               <div className="">
                 <h5 className="text-gray-300">
-                  Successfull Payments
+                  Refund Alert
                 </h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
@@ -447,7 +447,7 @@ function Profile() {
              <input type="checkbox" className="accent-primary" />
               <div className="">
                 <h5 className="text-gray-300">
-                  Successfull Payments
+                  Invoice Payments
                 </h5>
                 <p className="text-gray-500 text-sm">
                   Lorem ipsum dolor sit amet consectetur, elit. Reiciendis
