@@ -482,7 +482,7 @@ function Profile() {
           </label>
         </form>
 
-        <div className="flex justify-end">
+        <div className="flex mt-4 md:mt-0 justify-center md:justify-end">
           <button className="bg-red-500/60 text-gray-100 py-3 px-4 rounded-lg hover:bg-red-500/40 hover:text-gray-100 transition-colors">
             Desactivar cuenta
           </button>

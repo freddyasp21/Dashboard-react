@@ -87,7 +87,7 @@ function Sidebar() {
               {" "}
               <Link
                 className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
-                to="/"
+                to="/tickets"
               >
                 <RiCustomerService2Line className="text-primary" /> Soporte Técnico
               </Link>

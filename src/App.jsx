@@ -11,6 +11,7 @@ import ForgetPassowrd from "./pages/auth/ForgetPassword";
 import Home from "./pages/admin/Home";
 import Profile from './pages/admin/Profile'
 import Chat from "./pages/admin/Chat";
+import Tickets from './pages/admin/Tickets'
 import Error404 from "./pages/Erro404";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="perfil" element={<Profile />} />
           <Route path="chat" element={<Chat />} />
+          <Route path="tickets" element={<Tickets />} />
         </Route>
         <Route path="*" element={<Error404 />} />
       </Routes>
