@@ -10,7 +10,7 @@ import {
   RiFileTextLine,
   RiMessage3Line,
   RiTwitterLine,
-  RiGithubLine
+  RiGithubLine,
 } from "react-icons/ri";
 import { Tab, Disclosure, Transition } from "@headlessui/react";
 
@@ -18,7 +18,7 @@ function Tickets() {
   return (
     <div>
       {/* Title */}
-      <div className="flex items-center justify-between gap-y-4 mb-10">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-y-4 mb-10">
         <div className="">
           <h2 className="font-bold text-gray-100 text-xl">Overview</h2>
           <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -65,8 +65,8 @@ function Tickets() {
       {/* Tabs  */}
       <Tab.Group>
         <div className="bg-secondary-100 p-8 rounded-br-lg rounded-bl-lg mb-8">
-          <Tab.List className="flex items-center justify-between gap-2 bg-secondary-900/50 py-3 px-4 rounded-lg">
-            <div className="flex items-center gap-2">
+          <Tab.List className="flex flex-col md:flex-row md:items-center md:justify-between gap-x-2 gap-y-6 bg-secondary-900/50 py-3 px-4 rounded-lg">
+            <div className="flex flex-wrap items-center gap-2">
               <Tab className="py-2 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors outline-none ui-selected:bg-primary ui-selected:text-black ui-selected:font-medium">
                 Overview
               </Tab>
@@ -90,7 +90,7 @@ function Tickets() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-secondary-100 p-8 rounded-lg">
                 {/* Title card */}
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex flex-wrap items-center justify-between mb-8">
                   <h2 className="text-white text-2xl">Popular Tickets</h2>
                   <Link to="/" className="flex items-center gap-2 text-primary">
                     Support <RiArrowRightLine />
@@ -687,29 +687,381 @@ function Tickets() {
                   <h2 className="text-2xl text-white mb-8">Documentation</h2>
                   <ul className="flex flex-col gap-y-4">
                     <li>
-                      <Link to="/" className="flex items-center gap-2 hover:text-primary transition-colors"><RiArrowRightSLine/> Angular Admin</Link>
+                      <Link
+                        to="/"
+                        className="flex items-center gap-2 hover:text-primary transition-colors"
+                      >
+                        <RiArrowRightSLine /> Angular Admin
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/" className="flex items-center gap-2 hover:text-primary transition-colors"><RiArrowRightSLine/> React Admin</Link>
+                      <Link
+                        to="/"
+                        className="flex items-center gap-2 hover:text-primary transition-colors"
+                      >
+                        <RiArrowRightSLine /> React Admin
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/" className="flex items-center gap-2 hover:text-primary transition-colors"><RiArrowRightSLine/> Vue Admin</Link>
+                      <Link
+                        to="/"
+                        className="flex items-center gap-2 hover:text-primary transition-colors"
+                      >
+                        <RiArrowRightSLine /> Vue Admin
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/" className="flex items-center gap-2 hover:text-primary transition-colors"><RiArrowRightSLine/> Laravel Admin</Link>
+                      <Link
+                        to="/"
+                        className="flex items-center gap-2 hover:text-primary transition-colors"
+                      >
+                        <RiArrowRightSLine /> Laravel Admin
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/" className="flex items-center gap-2 hover:text-primary transition-colors"><RiArrowRightSLine/> Svelte Admin</Link>
+                      <Link
+                        to="/"
+                        className="flex items-center gap-2 hover:text-primary transition-colors"
+                      >
+                        <RiArrowRightSLine /> Svelte Admin
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/" className="flex items-center gap-2 hover:text-primary transition-colors"><RiArrowRightSLine/> Laravel Admin</Link>
+                      <Link
+                        to="/"
+                        className="flex items-center gap-2 hover:text-primary transition-colors"
+                      >
+                        <RiArrowRightSLine /> Laravel Admin
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </Tab.Panel>
-          <Tab.Panel></Tab.Panel>
+          <Tab.Panel>
+            <div className="bg-secondary-100 p-8 rounded-lg">
+              <div className="mb-10">
+                <h2 className="text-white text-2xl mb-8">
+                  Frequesntly Asked Questions
+                </h2>
+                <p className="text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minima aspernatur suscipit hic culpa placeat expedita ea
+                  recusandae quisquam quae perferendis rem consectetur
+                  perspiciatis, eligendi quis doloremque fugiat amet minus sunt!
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* section 01 */}
+                <div className="">
+                  <h3 className="text-xl text-white mb-8">Buying Product</h3>
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+                </div>
+                {/* Section 02 */}
+                <div className="">
+                  <h3 className="text-xl text-white mb-8">Installation</h3>
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+
+                  {/* Content card */}
+                  <Disclosure>
+                    <Disclosure.Button className="py-2 text-lg flex items-center gap-4">
+                      <RiArrowRightSLine className="text-primary ui-open:rotate-90 ui-open:transform transition-all" />{" "}
+                      Is team pricing available?{" "}
+                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                        React
+                      </span>
+                    </Disclosure.Button>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="text-gray-500 text-sm px-8 py-2">
+                        Yes! You can purchase a license that you can share with
+                        your entire team.{" "}
+                        <Link
+                          to="/"
+                          className="text-primary hover:primrary/90 hover:underline transition-all"
+                        >
+                          View more
+                        </Link>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </Disclosure>
+                </div>
+              </div>
+            </div>
+          </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
     </div>
