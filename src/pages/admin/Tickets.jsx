@@ -66,7 +66,7 @@ function Tickets() {
       <Tab.Group>
         <div className="bg-secondary-100 p-8 rounded-br-lg rounded-bl-lg mb-8">
           <Tab.List className="flex flex-col md:flex-row md:items-center md:justify-between gap-x-2 gap-y-6 bg-secondary-900/50 py-3 px-4 rounded-lg">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-col md:flex-row md:items-center gap-2">
               <Tab className="py-2 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors outline-none ui-selected:bg-primary ui-selected:text-black ui-selected:font-medium">
                 Overview
               </Tab>
@@ -78,7 +78,7 @@ function Tickets() {
               </Tab>
             </div>
 
-            <div className="">
+            <div className="flex justify-center">
               <button className="bg-primary/90 text-black hover:bg-primary flex items-center gap-2 py-2 px-4 rounded-lg transition-colors">
                 Create
               </button>
@@ -459,7 +459,7 @@ function Tickets() {
           <Tab.Panel>
             <div className="bg-secondary-100 p-8 rounded-lg grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* Section 1 */}
-              <div className="col-span-3 p-8">
+              <div className="col-span-3 md:p-8">
                 <form action="" className="mb-8">
                   <div className="relative">
                     <RiSearchLine className="absolute top-1/2 -translate-y-1/2 left-4" />
@@ -475,19 +475,19 @@ function Tickets() {
                 <div className="">
                   {/* ticket */}
                   <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-yellow-500" />
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-yellow-500" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
                         Django
                       </span>
                     </div>
-                    <div className="px-10">
+                    <div className="md:px-10">
                       <p className="text-gray-500">
                         {" "}
                         Lorem ipsum dolor sit, amet consectetur adipisicing
@@ -497,19 +497,19 @@ function Tickets() {
                   </div>
                   {/* ticket */}
                   <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-primary" />
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-primary" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
                         Django
                       </span>
                     </div>
-                    <div className="px-10">
+                    <div className="md:px-10">
                       <p className="text-gray-500">
                         {" "}
                         Lorem ipsum dolor sit, amet consectetur adipisicing
@@ -519,19 +519,19 @@ function Tickets() {
                   </div>
                   {/* ticket */}
                   <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-red-500" />
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-red-500" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
                         Django
                       </span>
                     </div>
-                    <div className="px-10">
+                    <div className="md:px-10">
                       <p className="text-gray-500">
                         {" "}
                         Lorem ipsum dolor sit, amet consectetur adipisicing
@@ -541,19 +541,19 @@ function Tickets() {
                   </div>
                   {/* ticket */}
                   <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-yellow-500" />
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-yellow-500" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
                         Django
                       </span>
                     </div>
-                    <div className="px-10">
+                    <div className="md:px-10">
                       <p className="text-gray-500">
                         {" "}
                         Lorem ipsum dolor sit, amet consectetur adipisicing
@@ -561,21 +561,21 @@ function Tickets() {
                       </p>
                     </div>
                   </div>
-                  {/* ticket */}
-                  <div className="flex flex-col gap-2 mb-8">
-                    <div className="flex items-center gap-4">
-                      <RiTicketLine className="text-2xl text-primary" />
+                 {/* ticket */}
+                 <div className="flex flex-col gap-2 mb-8">
+                    <div className="flex flex-wrap items-center gap-4">
+                      <RiTicketLine className="md:text-2xl text-primary" />
                       <Link
                         to="/"
-                        className="text-xl hover:text-blue-500 transition-colors"
+                        className="md:text-xl hover:text-blue-500 transition-colors"
                       >
                         How to use Netronic with Django Framework?
                       </Link>
-                      <span className="bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
+                      <span className="hidden md:block bg-secondary-900 text-white text-sm py-0.5 px-2 rounded-lg">
                         Django
                       </span>
                     </div>
-                    <div className="px-10">
+                    <div className="md:px-10">
                       <p className="text-gray-500">
                         {" "}
                         Lorem ipsum dolor sit, amet consectetur adipisicing
