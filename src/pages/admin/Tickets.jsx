@@ -457,9 +457,9 @@ function Tickets() {
             </div>
           </Tab.Panel>
           <Tab.Panel>
-            <div className="bg-secondary-100 p-8 rounded-lg grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="bg-secondary-100 p-8 rounded-lg grid grid-cols-1 lg:grid-cols-4 gap-8">
               {/* Section 1 */}
-              <div className="col-span-3 md:p-8">
+              <div className="md:col-span-3">
                 <form action="" className="mb-8">
                   <div className="relative">
                     <RiSearchLine className="absolute top-1/2 -translate-y-1/2 left-4" />
@@ -614,7 +614,7 @@ function Tickets() {
                 </div>
               </div>
               {/* Section 2 */}
-              <div className="">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8">
                 <div className="bg-secondary-900 p-8 rounded-lg mb-8">
                   <h2 className="text-2xl text-white mb-8">More channels</h2>
                   <div className="">
