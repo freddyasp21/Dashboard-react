@@ -49,7 +49,7 @@ function CardTickets(props) {
         "Sales of the Month",
         "Sales of the Day",
       ];
-      buttonCard = "Add New Sale";
+      buttonCard = "Add New Sales";
       break;
 
     case "calendar":
